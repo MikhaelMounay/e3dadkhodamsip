@@ -1,0 +1,37 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node --loader=ts-node/esm --env-file=.env --watch src/index.ts",
+        "build": "npx tsc",
+        "start": "node --env-file=.env dist/index.js",
+        "format": "prettier --write . --config ../.prettierrc --ignore-path ../.prettierignore",
+        "db:generate": "npx drizzle-kit generate",
+        "db:migrate": "npx drizzle-kit migrate",
+        "db:studio": "npx drizzle-kit studio --port 4000"
+    },
+    "type": "module",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.7",
+        "drizzle-orm": "^0.38.3",
+        "express": "^4.21.2",
+        "pg": "^8.13.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.2"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.17",
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.10.2",
+        "@types/pg": "^8.11.10",
+        "drizzle-kit": "^0.30.1",
+        "prettier": "3.4.2",
+        "tsx": "^4.19.2"
+    }
+}

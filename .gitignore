@@ -1,0 +1,10 @@
+.idea
+.vscode
+!.vscode/extensions.json
+
+out
+dist
+
+node_modules
+
+*.env.*
